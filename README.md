@@ -37,7 +37,7 @@ GET [https://api-trec-sxk5htqkea-et.a.run.app/](https://api-trec-sxk5htqkea-et.a
 
 **Example request:**
 
-GET [https://api-trec-sxk5htqkea-et.a.run.app/](https://api-trec-sxk5htqkea-et.a.run.app/search)detailDestinasi/14
+POST [https://api-trec-sxk5htqkea-et.a.run.app/](https://api-trec-sxk5htqkea-et.a.run.app/search)detailDestinasi/14
 
 example response
 
@@ -63,7 +63,7 @@ example response
 
 **Example request:**
 
-GET https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
+POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
 
 **Example response:**
 
