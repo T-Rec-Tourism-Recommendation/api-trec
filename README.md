@@ -1,3 +1,5 @@
+# T-REC API Documentation
+
 ## Base URL
 
 [https://api-trec-sxk5htqkea-et.a.run.app/](https://api-trec-sxk5htqkea-et.a.run.app/search)
@@ -18,7 +20,6 @@ GET [https://api-trec-sxk5htqkea-et.a.run.app/](https://api-trec-sxk5htqkea-et.a
 
 ```
 {
-        "id": 1,
         "Place_id": 128,
         "Place_Name": "Gumuk Pasir Parangkusumo",
         "City": "Yogyakarta",
@@ -62,31 +63,27 @@ example response
 
 **Example request:**
 
-POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
+GET https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
 
 **Example response:**
 
 ```json
 {
-        "id": 1,
         "Place_Name": "GunungTangkuban perahu",
         "City": "Bandung",
         "urlImage": ""
     },
     {
-        "id": 4,
         "Place_Name": "Jalan Braga",
         "City": "Bandung",
         "urlImage": ""
     },
     {
-        "id": 3,
         "Place_Name": "Gedung Sate",
         "City": "Bandung",
         "urlImage": ""
     },
     {
-        "id": 2,
         "Place_Name": "Trans Studio Bandung",
         "City": "Bandung",
         "urlImage": ""
@@ -103,11 +100,10 @@ POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
 
 **Example request and response filter category**
 
-**Endpoint**: /filter?cat=budaya
+**Endpoint :** /filter?cat=budaya
 
 ```json
 {
-        "id": 1,
         "urlImage": "",
         "Place_id": 82,
         "Place_Name": "Museum Satria Mandala",
@@ -115,7 +111,6 @@ POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
         "Category": "Budaya"
     },
     {
-        "id": 1,
         "urlImage": "",
         "Place_id": 86,
         "Place_Name": "Keraton Yogyakarta",
@@ -130,7 +125,6 @@ POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
 
 ```
 {
-        "id": 1,
         "urlImage": "",
         "Place_id": 335,
         "Place_Name": "Candi Gedong Songo",
@@ -138,7 +132,6 @@ POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
         "Category": "Budaya"
     },
     {
-        "id": 1,
         "urlImage": "",
         "Place_id": 336,
         "Place_Name": "Grand Maerakaca",
@@ -153,7 +146,6 @@ POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
 
 ```json
 {
-        "id": 1,
         "urlImage": "",
         "Place_id": 335,
         "Place_Name": "Candi Gedong Songo",
@@ -161,7 +153,6 @@ POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
         "Category": "Budaya"
     },
     {
-        "id": 1,
         "urlImage": "",
         "Place_id": 338,
         "Place_Name": "Lawang Sewu",
@@ -169,3 +160,58 @@ POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
         "Category": "Budaya"
     },
 ```
+
+# Rekomendasi
+
+**********************************Endpoint: /recommendation**********************************
+
+**Method:** POST
+
+**Description:** Melihat data hasil rekomendasi dan menfilter berdasarkan kota
+
+**Example request and response rekomendasi**
+
+Endpoint : POST /recommendation (request JSON)
+
+```
+{
+    "text": "saya ingin pergi ke tempat wisata yang dekat dengan alam, karena saya ingin melihat banyak pemandangan yang menyejukkan mata"
+}
+```
+
+```json
+"rekomendasi": "Cagar Alam",
+"destinasi": [
+        {
+            "id": 7,
+            "Place_Id": 7,
+            "Place_Name": "Kebun Binatang Ragunan",
+            "Description": "Kebun Binatang Ragunan adalah sebuah kebun binatang yang terletak di daerah Ragunan, Pasar Minggu, Jakarta Selatan, Indonesia. Kebun binatang seluas 140 hektare ini didirikan pada tahun 1864. Di dalamnya terdapat berbagai koleksi yang terdiri dari 295 spesies dan 4040 spesimen.\\nRagunan sempat ditutup selama sekitar tiga minggu sejak 19 September 2005 karena hewan-hewan di dalamnya ada yang terinfeksi flu burung, tetapi dibuka kembali pada 11 Oktober 2005.Kebun binatang ini memiliki banyak spesies hewan yang langka antara lain kakatua, orangutan, gorila, anoa dan gajah",
+            "Category": "Cagar Alam",
+            "City": "Jakarta",
+            "Price": 4000,
+            "Coordinate": "{'lat': -6.3124593, 'lng': 106.8201865}",
+            "Lat": -6.3124593,
+            "Longi": 106.8201865,
+            "urlImage": "https://storage.googleapis.com/destination-image/gambar-destinasi/37.%20Taman%20Kasmaran.jpg"
+        },
+        {
+            "id": 19,
+            "Place_Id": 93,
+            "Place_Name": "Gembira Loka Zoo",
+            "Description": "Kebun Binatang Gembira Loka biasa disebut Gembira Loka Zoo (disingkat GL Zoo, bahasa Jawa: ꦏꦼꦧꦺꦴꦤ꧀ꦫꦗꦒꦼꦩ꧀ꦧꦶꦫꦭꦺꦴꦏ, translit. Kêbon Raja Gêmbira Loka) adalah kebun binatang yang berada di Kota Yogyakarta. Berisi berbagai macam spesies dari belahan dunia, seperti orang utan, gajah asia, simpanse, harimau, dan lain sebagainya. Kebun Binatang Gembira Loka menjadi daya tarik tersendiri bagi para wisatawan Yogyakarta. Gembira Loka Zoo sempat rusak parah akibat gempa bumi Yogyakarta tahun 2006. Tetapi, setelah direnovasi Kebun Binatang Gembira Loka tetap dicari para wisatawan.",
+            "Category": "Cagar Alam",
+            "City": "Yogyakarta",
+            "Price": 60000,
+            "Coordinate": "{'lat': -7.806234399999999, 'lng': 110.3967977}",
+            "Lat": -7.8062344,
+            "Longi": 110.3967977,
+            "urlImage": "https://storage.googleapis.com/destination-image/gambar-destinasi/19.%20Gembira%20Loka%20Zoo.jpg"
+        },
+		]
+}
+```
+
+**Example request and response rekomendasi**
+
+/recommendation?kota=semarang
