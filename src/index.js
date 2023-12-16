@@ -18,6 +18,18 @@ app.use(cors())
 
 app.use(require('./route/route.js'))
 
+app.post('/json', (req, res) => {
+  const userInput = req.body;
+
+  if (!userInput) {
+    return res.status(400).json({ error: 'Invalid JSON format' });
+  }
+
+  // Respond with the same JSON received from the user
+  res.json( userInput );
+});
+
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
