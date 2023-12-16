@@ -8,20 +8,18 @@ const predict = async (req, res) => {
     const apiurl = "http://127.0.0.1:4000/predict_text";
     
     // Make a POST request using Axios
-    const getAnswer = await axios.post(apiurl, {
+    const getRecommendation = await axios.post(apiurl, {
       text: text  
     });
     
     // Send the response back to the client
-    const { prediction }  = getAnswer.data
+    const { prediction }  = getRecommendation.data
 
     let query = `SELECT * FROM tourism_with_id  WHERE Category LIKE '%${prediction}%'`;
 
     if (city) {
       query += ` AND LOWER(City) LIKE LOWER('%${city}%')`;
     }
-
-    console.log(query)
 
     db.query(query, (err, results) => {
       if (err) {
