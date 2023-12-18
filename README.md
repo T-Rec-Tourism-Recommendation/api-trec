@@ -16,15 +16,25 @@
 
 GET [https://api-trec-sxk5htqkea-et.a.run.app/](https://api-trec-sxk5htqkea-et.a.run.app/search)destinasi
 
-**Example response to one of the many destinations :** 
+**Example response to two of the many destinations :** 
 
-```
-{
-        "Place_id": 128,
-        "Place_Name": "Gumuk Pasir Parangkusumo",
-        "City": "Yogyakarta",
-        "urlImage": ""
+```json
+[
+    {
+        "id": 3,
+        "Place_id": 3,
+        "Place_Name": "Dunia Fantasi",
+        "City": "Jakarta",
+        "urlImage": "https://storage.googleapis.com/destination-image/gambar-destinasi/33.%20Lawang%20Sewu.jpg"
     },
+    {
+        "id": 49,
+        "Place_id": 400,
+        "Place_Name": "Hutan Bambu Keputih",
+        "City": "Surabaya",
+        "urlImage": "https://storage.googleapis.com/destination-image/gambar-destinasi/49.%20Hutan%20Bambu%20Keputih.jpg"
+    },
+]
 ```
 
 ## Detail Destinasi
@@ -37,19 +47,19 @@ GET [https://api-trec-sxk5htqkea-et.a.run.app/](https://api-trec-sxk5htqkea-et.a
 
 **Example request:**
 
-POST [https://api-trec-sxk5htqkea-et.a.run.app/](https://api-trec-sxk5htqkea-et.a.run.app/search)detailDestinasi/14
+GET [https://api-trec-sxk5htqkea-et.a.run.app/](https://api-trec-sxk5htqkea-et.a.run.app/search)detailDestinasi/14
 
-example response
+E**xample response:**
 
-```
+```json
 {
-    "ID": 14,
-    "urlImage": "",
-    "namaTempat": "Pulau Pelangi",
+    "ID": 1,
+    "urlImage": "https://storage.googleapis.com/destination-image/gambar-destinasi/1.Monas.jpg",
+    "namaTempat": "Monumen Nasional",
     "Lokasi": "Jakarta",
-    "HTM": 900000,
-    "Deskripsi": "Pulau Pelangi adalah sebuah pulau yang terletak di Kepulauan Seribu di Daerah Khusus Ibukota Jakarta, Indonesia. Pulau Pelangi adalah sebuah pulau yang terletak di Kepulauan Seribu di Daerah Khusus Ibukota Jakarta, Indonesia, Pulau Pelangi / biasa disebut Pulau Petondan Besar ( Pelangi Island ) merupakan pulau resort yang sesuai untuk berlibur. Pulau Resort ini mempunyai konsep natural, karena sebagian wilayahnya di penuhi dengan rerimbunan pohon yang menyejukan mata, Keindahan alam dan lautnya layak untuk dikunjungi. Dikelilingi oleh rimbunan pohon dan laut berwarana biru jernih membuat suasanan sejuk dan nyaman. Kondisi yang ideal untuk wisata bersama keluarga. Dengan akomodasi yang langsung menghadap ke laut membuat turis betah berlama-lama di Pulau Pelangi.\\nMenurut informasi, Pulau Pelangi atau Pulau Petondan Besar merupakan pulau yang berada pada gugusan Kepulauan Seribu. Secara administratif termasuk dalam wilayah Kabupaten Administratif Kepulauan Seribu provinsi DKI Jakarta. Bersamaan dengan Pulau Petondan Kecil merupakan sebuah resort berlibur. Letaknya berdekatan dengan gugusan yang sama dengan Pulau Kelor dan Pulau Kelapa.\\nUntuk mencapai Pelangi Resort dibutuhkan waktu 90 menit perjalanan dari dermaga Pantai Mutiara. Terdapat kapal speedboat khusus di pier R1 Pantai Mutiara yang membawa penumpang kesana. Letaknya 60 â€“ 70 km dari Pantai Mutiara memang lumayan jauh. Namun perjalanan anda terbayar lunas begitu sampai di Pulau Pelangi.\n",
-    "google_maps_link": "https://www.google.com/maps?q=-5.587055,106.5885"
+    "HTM": 20000,
+    "Deskripsi": "Monumen Nasional atau yang populer disingkat dengan Monas atau Tugu Monas adalah monumen peringatan setinggi 132 meter (433 kaki) yang didirikan untuk mengenang perlawanan dan perjuangan rakyat Indonesia untuk merebut kemerdekaan dari pemerintahan kolonial Hindia Belanda. Pembangunan monumen ini dimulai pada tanggal 17 Agustus 1961 di bawah perintah presiden Soekarno dan dibuka untuk umum pada tanggal 12 Juli 1975. Tugu ini dimahkotai lidah api yang dilapisi lembaran emas yang melambangkan semangat perjuangan yang menyala-nyala. Monumen Nasional terletak tepat di tengah Lapangan Medan Merdeka, Jakarta Pusat.",
+    "google_maps_link": "https://www.google.com/maps?q=-6.1753924,106.8271528"
 }
 ```
 
@@ -68,29 +78,25 @@ POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
 **Example response:**
 
 ```json
-{
-        "Place_Name": "GunungTangkuban perahu",
+[
+    {
+        "id": 21,
+        "Place_id": 216,
+        "Place_Name": "Farm House Susu Lembang",
         "City": "Bandung",
-        "urlImage": ""
+        "urlImage": "https://storage.googleapis.com/destination-image/gambar-destinasi/21.%20Farm%20House%20Susu%20Lembang.jpg"
     },
     {
-        "Place_Name": "Jalan Braga",
+        "id": 22,
+        "Place_id": 217,
+        "Place_Name": "Kebun Binatang Bandung",
         "City": "Bandung",
-        "urlImage": ""
+        "urlImage": "https://storage.googleapis.com/destination-image/gambar-destinasi/22.%20Kebun%20Binatang%20Bandung.jpg"
     },
-    {
-        "Place_Name": "Gedung Sate",
-        "City": "Bandung",
-        "urlImage": ""
-    },
-    {
-        "Place_Name": "Trans Studio Bandung",
-        "City": "Bandung",
-        "urlImage": ""
-    },
+]
 ```
 
-# Filter Destinasi
+## Filter Destinasi
 
 **********************************Endpoint: /filter**********************************
 
@@ -103,20 +109,24 @@ POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
 **Endpoint :** /filter?cat=budaya
 
 ```json
-{
-        "urlImage": "",
-        "Place_id": 82,
-        "Place_Name": "Museum Satria Mandala",
+[
+    {
+        "urlImage": "https://storage.googleapis.com/destination-image/gambar-destinasi/1.Monas.jpg",
+        "id": 1,
+        "Place_id": 1,
+        "Place_Name": "Monumen Nasional",
         "City": "Jakarta",
         "Category": "Budaya"
     },
     {
-        "urlImage": "",
-        "Place_id": 86,
-        "Place_Name": "Keraton Yogyakarta",
-        "City": "Yogyakarta",
+        "urlImage": "https://storage.googleapis.com/destination-image/gambar-destinasi/2.%20Kota%20Tua.jpg",
+        "id": 2,
+        "Place_id": 2,
+        "Place_Name": "Kota Tua",
+        "City": "Jakarta",
         "Category": "Budaya"
     },
+]
 ```
 
 **Example filter kota**
@@ -124,20 +134,24 @@ POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
 **Endpoint :** /filter?kota=Semarang
 
 ```
-{
-        "urlImage": "",
-        "Place_id": 335,
-        "Place_Name": "Candi Gedong Songo",
-        "City": "Semarang",
-        "Category": "Budaya"
-    },
+[
     {
-        "urlImage": "",
+        "urlImage": "https://storage.googleapis.com/destination-image/gambar-destinasi/31.%20Grand%20Maerakaca.jpg",
+        "id": 31,
         "Place_id": 336,
         "Place_Name": "Grand Maerakaca",
         "City": "Semarang",
         "Category": "Taman Hiburan"
     },
+    {
+        "urlImage": "https://storage.googleapis.com/destination-image/gambar-destinasi/32.%20Kampung%20Pelangi.jpg",
+        "id": 32,
+        "Place_id": 337,
+        "Place_Name": "Kampung Pelangi",
+        "City": "Semarang",
+        "Category": "Taman Hiburan"
+    },
+]
 ```
 
 **Example filter data keduanya**
@@ -145,23 +159,27 @@ POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
 **Endpoint:** /filter?cat=budaya&kota=Semarang
 
 ```json
-{
-        "urlImage": "",
-        "Place_id": 335,
-        "Place_Name": "Candi Gedong Songo",
-        "City": "Semarang",
-        "Category": "Budaya"
-    },
+[
     {
-        "urlImage": "",
+        "urlImage": "https://storage.googleapis.com/destination-image/gambar-destinasi/33.%20Lawang%20Sewu.jpg",
+        "id": 33,
         "Place_id": 338,
         "Place_Name": "Lawang Sewu",
         "City": "Semarang",
         "Category": "Budaya"
     },
+    {
+        "urlImage": "https://storage.googleapis.com/destination-image/gambar-destinasi/34.%20Sam%20Po%20Kong.jpeg",
+        "id": 34,
+        "Place_id": 339,
+        "Place_Name": "Sam Poo Kong Temple",
+        "City": "Semarang",
+        "Category": "Budaya"
+    }
+]
 ```
 
-# Rekomendasi
+## Rekomendasi
 
 **********************************Endpoint: /recommendation**********************************
 
@@ -178,6 +196,8 @@ Endpoint : POST /recommendation (request JSON)
     "text": "saya ingin pergi ke tempat wisata yang dekat dengan alam, karena saya ingin melihat banyak pemandangan yang menyejukkan mata"
 }
 ```
+
+**Example Response:**
 
 ```json
 "rekomendasi": "Cagar Alam",
@@ -215,3 +235,37 @@ Endpoint : POST /recommendation (request JSON)
 **Example request and response rekomendasi**
 
 /recommendation?kota=semarang
+
+```json
+{
+    "rekomendasi": "Cagar Alam",
+    "destinasi": [
+        {
+            "id": 36,
+            "Place_Id": 341,
+            "Place_Name": "Hutan Wisata Tinjomoyo Semarang",
+            "Description": "Awalnya taman wisata hutan Tinjomoyo Semarang (smg) ini merupakan sebuah kebun binatang dengan ragam binatang hutan di dalamnya. Namun terjadi banjir besar, hingga memutuskan jembatan besar yang menjadi akses utama menuju hutan wisata. Hutan Tinjomoyo sendiri memiliki kontur wilayah dengan perpaduan bukit, sungai dan hutan. Tumbuhan yang paling banyak terdapat di sini adalah vegetasi pohon jati serta pinus. Oleh karena itu, tak heran jika kawasan ini cocok sekali dijadikan hutan wisata yang masih alami.Dengan luas lahan 57,5 hektare area tersebut lebih sering dimanfaatkan sebagai tempat berkemah",
+            "Category": "Cagar Alam",
+            "City": "Semarang",
+            "Price": 3000,
+            "Coordinate": "{'lat': -7.0296837, 'lng': 110.3999611}",
+            "Lat": -7.0296837,
+            "Longi": 110.3999611,
+            "urlImage": "https://storage.googleapis.com/destination-image/gambar-destinasi/36.%20Hutan%20Tinjomoyo.png"
+        },
+        {
+            "id": 40,
+            "Place_Id": 355,
+            "Place_Name": "Umbul Sidomukti",
+            "Description": "Kawasan wisata umbul Sidomukti merupakan salah satu Wisata Alam Pegunungan di Semarang, berada di Desa Sidomukti Kecamatan Bandungan Kabupaten Semarang. Kawasan wisata ini dengan didukung fasiltas & Servis: Outbond Training, Adrenalin Games, Taman Renang Alam, Camping Ground, Pondok Wisata, Pondok Lesehan, serta Meeting Room.",
+            "Category": "Cagar Alam",
+            "City": "Semarang",
+            "Price": 75000,
+            "Coordinate": "{'lat': -7.1945903, 'lng': 110.3733583}",
+            "Lat": -7.1945903,
+            "Longi": 110.3733583,
+            "urlImage": "https://storage.googleapis.com/destination-image/gambar-destinasi/40.%20candi%20gedong%20songo.jpg"
+        }
+    ]
+}
+```
