@@ -2,7 +2,7 @@
 
 ## Base URL
 
-[https://api-trec-sxk5htqkea-et.a.run.app/](https://api-trec-sxk5htqkea-et.a.run.app/search)
+[https://api-trec-im2d257paa-et.a.run.app/](https://api-trec-im2d257paa-et.a.run.app/)
 
 ## Destinasi
 
@@ -14,7 +14,7 @@
 
 **Example request :**
 
-GET [https://api-trec-sxk5htqkea-et.a.run.app/](https://api-trec-sxk5htqkea-et.a.run.app/search)destinasi
+GET https://api-trec-im2d257paa-et.a.run.app/destinasi
 
 **Example response to two of the many destinations :** 
 
@@ -47,9 +47,9 @@ GET [https://api-trec-sxk5htqkea-et.a.run.app/](https://api-trec-sxk5htqkea-et.a
 
 **Example request:**
 
-GET [https://api-trec-sxk5htqkea-et.a.run.app/](https://api-trec-sxk5htqkea-et.a.run.app/search)detailDestinasi/14
+GET https://api-trec-im2d257paa-et.a.run.app/detailDestinasi/14
 
-E**xample response:**
+**Example response:**
 
 ```json
 {
@@ -73,7 +73,7 @@ E**xample response:**
 
 **Example request:**
 
-POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
+POST https://api-trec-im2d257paa-et.a.run.app/search?input=bandung
 
 **Example response:**
 
@@ -106,7 +106,7 @@ POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
 
 **Example request and response filter category**
 
-**Endpoint :** /filter?cat=budaya
+**Endpoint :** https://api-trec-im2d257paa-et.a.run.app/filter?cat=budaya
 
 ```json
 [
@@ -131,7 +131,7 @@ POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
 
 **Example filter kota**
 
-**Endpoint :** /filter?kota=Semarang
+**Endpoint :** https://api-trec-im2d257paa-et.a.run.app/filter?kota=Semarang
 
 ```
 [
@@ -156,7 +156,7 @@ POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
 
 **Example filter data keduanya**
 
-**Endpoint:** /filter?cat=budaya&kota=Semarang
+**Endpoint:** https://api-trec-im2d257paa-et.a.run.app/filter?cat=budaya&kota=Semarang
 
 ```json
 [
@@ -189,7 +189,7 @@ POST https://api-trec-sxk5htqkea-et.a.run.app/search?input=bandung
 
 **Example request and response rekomendasi**
 
-Endpoint : POST /recommendation (request JSON)
+Endpoint : POST https://api-trec-im2d257paa-et.a.run.app/recommendation (request JSON)
 
 ```
 {
@@ -234,7 +234,7 @@ Endpoint : POST /recommendation (request JSON)
 
 **Example request and response rekomendasi**
 
-/recommendation?kota=semarang
+https://api-trec-im2d257paa-et.a.run.app/recommendation?kota=semarang
 
 ```json
 {
